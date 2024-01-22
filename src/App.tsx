@@ -2,10 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import UiRouter from './UiRouter'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isHelloShow, setIsHellowShow] = useState(window.location.hash === '#!/counter/hello')
 
   return (
     <>
@@ -29,9 +29,17 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <UiRouter/>
+      <div>
+        <a href="#!/counter/hello" ui-sref-active="active" onClick={() => setIsHellowShow(true)}>Counter.Hello</a>
+      </div>
+      <Hello isShow={isHelloShow}/>
     </>
   )
+}
+
+
+function Hello({isShow}: {isShow : boolean}) {
+  return isShow ? <div>Counter - Hello</div> : null
 }
 
 export default App

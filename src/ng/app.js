@@ -28,9 +28,15 @@ const appModule = angular
       url: '/counter',
       component: 'counter'
     }
+    const counterChildState = {
+      name: 'counter.child',
+      url: '/hello',
+      component: 'counter',
+    }
     $stateProvider.state(helloState)
     $stateProvider.state(aboutState)
     $stateProvider.state(counterState)
+    $stateProvider.state(counterChildState)
   }])
   .component('app', AppComponent);
 
