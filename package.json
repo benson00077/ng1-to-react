@@ -13,7 +13,8 @@
     "@uirouter/angularjs": "^1.1.0",
     "angular": "^1.8.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react2angular": "^4.0.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

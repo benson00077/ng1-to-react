@@ -10,6 +10,7 @@ const appModule = angular
     ServicesModule,
   ])
   .config(['$stateProvider', function($stateProvider) {
+    /** UI-Router config */
     const helloState = {
       name: 'hello',
       url: '/hello',
@@ -20,8 +21,16 @@ const appModule = angular
       url: '/about',
       template: '<h3>Its the UI-Router hello world app!</h3>'
     }
+    //TODO: state lost when switching route, workaround is to preserve state into service.
+    // \_ ref: https://stackoverflow.com/questions/18023823/preserve-state-with-angular-ui-router
+    const counterState = {
+      name: 'counter',
+      url: '/counter',
+      component: 'counter'
+    }
     $stateProvider.state(helloState)
     $stateProvider.state(aboutState)
+    $stateProvider.state(counterState)
   }])
   .component('app', AppComponent);
 

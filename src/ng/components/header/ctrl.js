@@ -1,3 +1,4 @@
+import "./navbar.css"
 
 const headerModule = angular
   .module('navbar', [])

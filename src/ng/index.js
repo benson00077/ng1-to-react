@@ -22,4 +22,4 @@ angular.element(() => {
 });
 
 // eslint-disable-next-line angular/document-service
-document.body.appendChild(component());
+const root = document.querySelector('#root').appendChild(component());
