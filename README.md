@@ -1,3 +1,14 @@
+# Why?
+
+This project demo how you:
+- intergrate angular.js into ESModule with vite
+  - ref: https://github.com/xlts-dev/angularjs-material-vite
+- migrate a lagecy Angularjs project to Reactjs.
+  - ref: [How we moved from AngularJS to React](https://www.babbel.com/en/magazine/how-we-moved-from-angularjs-to-react)
+  - using `Ui-rotuer`. State still lost while swtiching between Framworks.
+  - integrated SPA using `react2angular`, which helps wrapping react samll components into angularjs one
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
